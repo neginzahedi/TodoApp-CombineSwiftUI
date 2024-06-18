@@ -8,14 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var vm = TaskListViewModel.shared
+    @State private var showAddTaskView: Bool = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack(alignment: .leading){
+            Text("Tasks")
+                .font(.largeTitle)
+                .padding()
+            List{
+                ForEach(vm.tasks.value, id: \.self){ task in
+                    Text(task)
+                }
+            }
+            Button {
+                showAddTaskView.toggle()
+            } label: {
+                Text("Add New")
+            }
+            .padding()
+            .frame(maxWidth: .infinity, alignment: .center)
         }
-        .padding()
+        
+        .sheet(isPresented: $showAddTaskView, content: {
+            AddTaskView(vm: vm)
+        })
     }
 }
 
