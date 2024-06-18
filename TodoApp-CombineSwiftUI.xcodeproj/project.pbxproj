@@ -55,10 +55,9 @@
 		0FC224232C21EDD700909C61 /* TodoApp-CombineSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				0FC224372C22113000909C61 /* ViewModel */,
+				0FC224362C22112B00909C61 /* View */,
 				0FC224242C21EDD700909C61 /* TodoApp_CombineSwiftUIApp.swift */,
-				0FC224262C21EDD700909C61 /* ContentView.swift */,
-				0FC224342C21F05F00909C61 /* AddTaskView.swift */,
-				0FC224322C21EE6A00909C61 /* TaskListViewModel.swift */,
 				0FC224282C21EDD800909C61 /* Assets.xcassets */,
 				0FC2242A2C21EDD800909C61 /* Preview Content */,
 			);
@@ -71,6 +70,23 @@
 				0FC2242B2C21EDD800909C61 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0FC224362C22112B00909C61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0FC224262C21EDD700909C61 /* ContentView.swift */,
+				0FC224342C21F05F00909C61 /* AddTaskView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0FC224372C22113000909C61 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0FC224322C21EE6A00909C61 /* TaskListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
